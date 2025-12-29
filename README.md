@@ -4,9 +4,15 @@
 
 [Original Dataset](https://www.kaggle.com/datasets/charlottebennett1234/lifestyle-factors-and-their-impact-on-students/code?datasetId=7103940)
 
-# Part 1: Big Picture Patterns
-When we look at a dataset, it's helpful to look at the bigger picture: we need to know what parts to dive into deeper. We have a bunch of continuous variables: Study Hours, Extracurricular Hours, Sleep Hours, Social Hours, Physical Activity Hours, and CGPA. We also have some categorical data: Gender and Stress levels. So we calculated correlation coefficients between each of the continuous variables.
-<img src="img/correlations.png"></br>
-Hmm. I wonder if things are any different if we group by stress levels.
-<img src="img/grouped-stress-correlations.png"></br>
-Aha! We can indeed see that the relationships between some linear variables differs for high stress students versus everyone else!
+# Methods
+We used the pandas library to process the data and the popular library seaborn to create the data visualizations. 
+
+# Results
+We found a greater correlation between hours of sleep and grades for high stress students compared to other students, and hours spent studying were more correlated to high grades to high stress students than other students. Additionally, hours spent doing physical activity had much stronger of a negative correlation with grades for high stress students to other students. We also found that physical activity hours, sleep hours, and study hours affect grades the most, making them good targets for later predictive statistics or linear regression.
+
+
+![Diagram 1.1: Hours of sleep have different impact on the grades of high stress students](img/sleep-by-stress.png)
+![Diagram 1.2: Hours spent studying have different impact on the grades of high stress students](img/study-by-stress.png)
+![Diagram 1.3: Hours spent doing physical activity have different impact on the grades of high stress students](img/physical-by-stress.png)
+
+We also found that in this dataset, high stress students have better grades. 
